@@ -23,3 +23,9 @@ switch screen (without changing the page)
         reset button
 End
 */
+
+/* Functions I might want to use
+    window.onload function
+    addEventListener for the next and reset buttons
+    
+ */
