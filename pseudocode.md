@@ -1,6 +1,6 @@
 ## Mind Reader Project
 
-### SMAC (Specific, Methodical, ) List
+### SMAC (Specific Methodical and Consistent) List
 
 ##### Understand the problem
 
@@ -59,3 +59,7 @@
 * Dynamically change the CSS with Javascriipt
     * Tip: Alter a css property of a dynamic or static element
 * Connect the Browser's Back Button to the State to allow for forward and backward navigation via the Browser. 
+
+
+### Pseudocode
+ 
