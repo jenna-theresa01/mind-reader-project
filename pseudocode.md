@@ -4,43 +4,43 @@
 
 ##### Understand the problem
 
-	* navigation
-	* additional text
-	* reset button
-	* user
-	* mapping
+* navigation
+* additional text
+* reset button
+* user
+* mapping
 
 ##### Break the issue into smaller parts
 
-	* subtext
+* subtext
 
 ##### Wireframe/Atomic 
 
-	* Atoms
-		* p tag
-		* h1 
-	* Molecules
-		* go/refresh button
-		* nav item
-	* Organisms
-		* nav
-	* Templates
-		* large text
-		* next button
-		* small text
-		* refresh button
-	* Pages
+* Atoms
+	* p tag
+	* h1 
+* Molecules
+	* go/refresh button
+	* nav item
+* Organisms
+	* nav
+* Templates
+	* large text
+	* next button
+	* small text
+	* refresh button
+* Pages
 
 ##### State?? 
-
-	* data structures
-		* array [...]
-	* Algorithms
+*  data structures
+	* array [...]
+* Algorithms
 
 ##### P-F-O
 
 
 ##### Requirements
+
 [ ] Pseudocode first
 [ ] Use JS to show the transition from one view to the next view
 [ ] Show state management for each step of the single page app 
