@@ -27,5 +27,7 @@ End
 /* Functions I might want to use
     window.onload function
     addEventListener for the next and reset buttons
+    a funtion to switch between "pages" without refreshing the webpage and using a button 
     
+
  */
