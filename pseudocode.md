@@ -41,15 +41,15 @@
 
 ##### Requirements
 
-[ ] Pseudocode first
-[ ] Use JS to show the transition from one view to the next view
-[ ] Show state management for each step of the single page app 
-    [X] Only create a single index.html
-    [ ] No need to refresh Page
-    [ ] Update state using a variable that tells the computer what 'view' it is
-    [ ] Use functions to move forward a view, reset to the first view, and display the correct view on load / after every state change
-[ ] Use icons of your choice
-[ ] All multiples of 9 should be the same symbol
+- [ ] Pseudocode first
+- [ ] Use JS to show the transition from one view to the next view
+- [ ] Show state management for each step of the single page app 
+    - [X] Only create a single index.html
+    - [ ] No need to refresh Page
+    - [ ] Update state using a variable that tells the computer what 'view' it is
+    - [ ] Use functions to move forward a view, reset to the first view, and display the correct view on load / after every state change
+- [ ] Use icons of your choice
+- [ ] All multiples of 9 should be the same symbol
 
 ##### Stretch Goals
 * Keep track of the users' current page if they accidentally refresh using LocalStorage
