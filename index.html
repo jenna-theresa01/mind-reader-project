@@ -4,50 +4,86 @@
         <meta charset="utf-8">
         <title>Mind Reader</title>
         <link href="css/style.css" rel="stylesheet">
-        <script src="js/main.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
     <body>
         <!-- This will be the entirety of the page, held within this container -->
-        <div class="container">
-            <div> <!-- I need a button here to start the game -->
+         <div class="container position-absolute d-flex justify-content-center"> 
+             <div id="page1" class="container-sm"> <!-- I need a button here to start the game -->
+                <!-- page 1 -->
                 <div>I can read your mind</div>
-                <button type="button" class="btn btn-outline-primary">Go</button>
-            </div>
-            <div> <!-- I need two buttons here: next and refresh -->
-                <div>Pick a number from 01 - 99</div>
-                <button type="button" class="btn">Next</button>
-                <div>when you have your number click next</div>
-                <button type="button" class="btn btn-outline-primary">"reset"</button>
+                <button type="button" id="go" class="btn btn-outline-primary btn-floating" style="border-radius: 50%; width: 50px; height: 50px;">Go</button>
+             </div>
 
+             <div id="page2" class="container-sm"> <!-- I need two buttons here: next and reset -->
+                <!-- page 2 -->
+                <div>Pick a number from 01 - 99</div>
+                <button type="button"  class="btn next btn-primary">Next</button>
+                <div>when you have your number click next</div>
+                <button type="button" class="btn reset btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                      </svg>
+                </button>
             </div>
-            <div> <!-- I need two buttons here: next and refresh -->
+
+             <div id="page3" class="container-sm"> <!-- I need two buttons here: next and reset -->
+                <!-- page 3 -->
                 <div>Add both digits together to get a new number</div>
-                <button type="button" class="btn">Next</button>
+                <button type="button" class="btn next btn-primary">Next</button>
                 <div>Ex: 14 is 1 + 4 = 5</div>
                 <div>click next to proceed</div>
-                <button type="button" class="btn btn-outline-primary">"reset"</button>
+                <button type="button" class="btn reset btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                      </svg>
+                </button>
             </div>
-            <div> <!-- I need two buttons here: next and refresh -->
+
+             <div id="page4" class="container-sm"> <!-- I need two buttons here: next and reset -->
+                <!-- page 4 -->
                 <div>Subtract your new number from the original number</div>
-                <button type="button" class="btn">Next</button>
+                <button type="button" class="btn next btn-primary">Next</button>
                 <div> Ex: 14 - 5 = 9</div>
                 <div>click next to proceed</div>
-                <button type="button" class="btn btn-outline-primary">"reset"</button>
+                <button type="button" class="btn reset btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                      </svg>
+                </button>
             </div>
-            <div> <!-- This is where I will assign the bootstrap icons for numbers 0-9 -->
+
+            <div id="page5" class="container-sm"> This is where I will assign the bootstrap icons for numbers 0-9
+                <!-- page 5 -->
                 <div>"assign symbols here"</div>
-                <button type="button" class="btn">Reveal</button>
+                <button type="button" id="reveal" class="btn btn-primary">Reveal</button>
                 <div>Find your new number</div>
                 <div>Note the symbol beside the number</div>
-                <button type="button" class="btn btn-outline-primary">"reset"</button>
+                <button type="button" class="btn reset btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                      </svg>
+                </button>
             </div>
-            <div> <!-- Return the symbol associated with the number 9 -->
+
+            <div id="page6" class="container-sm"> Return the symbol associated with the number 9
+                <!-- page 6 -->
                 <div>"this is the 'mind read' symbol</div>
-                <div>Your symbol is: </div>
-                <button type="button" class="btn btn-outline-primary">"reset"</button>
+                <div>Your symbol is:</div>
+                <button type="button" class="btn btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                      </svg>
+                </button>
             </div>
+
         </div>
+        <script src="js/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     </body>
