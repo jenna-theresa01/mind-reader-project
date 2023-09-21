@@ -82,9 +82,35 @@ function hide(elements) {
     elements = elements.length ? elements : [elements];
     for (let index = 0; index < elements.length; index++) {
         elements[index].style.display = 'none';
-    }
-}
+    };
+};
 
 hide(document.querySelectorAll("#page2, #page3, #page4, #page5, #page6"));
 
 // now I want to be able to toggle between the pages using the buttons on the screen 
+document.getElementById("go").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page2, #page3, #page4, #page5, #page6"));
+  });
+
+function toggle (elements, specifiedDisplay) {
+    let element, index;
+
+    elements = elements.length ? elements : [elements];
+    for (let index = 0; index < elements.length; index++) {
+        element = elements[index];
+
+        if (isElementHidden(element)) {
+            element.style.display = '';
+
+            if (isElementHidden(element)) {
+                element.style.display = specifiedDisplay || "block";
+            }
+        } else {
+            element.style.display = "none";
+        }
+        function isElementHidden (element) {
+            return window.getComputedStyle(element, null).getPropertyValue("display") === "none"
+        }
+    }
+}
+
