@@ -25,10 +25,29 @@ End
 */
 
 /* Functions I might want to use
-    window.onload function
-    addEventListener for the next and reset buttons
-    a funtion to switch between "pages" without refreshing the webpage and using a button 
-    onclick listener
-    jQuery??
+    - window.onload function
+        - 
+    - addEventListener for the next and reset buttons
+        - oncuechange?? fires a TextTrack has changed the currently displaying cues 
+        - "click event"
+    - a funtion to switch between "pages" without refreshing the webpage and using a button 
+    - onclick listener
+        - 
+    - jQuery??
+
 
  */
+
+window.onload = (event) => {
+    console.log("page is loaded");
+} 
+let go_btn = document.getElementById("go")
+go_btn.addEventListener("click", myFunction);
+function myFunction() {
+
+
+
+
+    
+    console.log("myFunction");
+}
