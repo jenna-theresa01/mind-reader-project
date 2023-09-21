@@ -31,13 +31,13 @@ End
         - oncuechange?? fires a TextTrack has changed the currently displaying cues 
         - "click event"
     - a funtion to switch between "pages" without refreshing the webpage and using a button 
+        -toggle (hide/show) an element
     - onclick listener
         - 
-    - jQuery??
 
 
  */
-
+// can I use this to show the first "page" on content? 
 window.onload = (event) => {
     console.log("page is loaded");
 } 
@@ -50,13 +50,24 @@ function myFunction() {
 }
 
 // this is adding a click event to my *first* "Next" buttton
-// need to figure out how to include the other two "Next" buttons
-let next_btn = document.getElementById("next")
-next_btn.addEventListener("click", nextButton);
-function nextButton() {
-    
+// need to figure out how to include the other two "Next" buttons (got it)
+
+// following function works, but now I need to make something happen, ie changing the page
+let next_btn = document.getElementsByClassName("next");
+
+let other_btn = function() {
+    let attribute = this.getAttribute("data-myattribute");
+    alert(attribute);
+};
+
+for (let i = 0; i < next_btn.length; i++) {
+    next_btn[i].addEventListener('click', other_btn);
+
     console.log("nextButton");
-}
+};
+
+
+
 
 // this is adding a click event to my "Go" buttton
 let reveal_btn = document.getElementById("reveal")
@@ -65,3 +76,15 @@ function revealButton() {
 
     console.log("revealButton");
 }
+
+// this is hiding all the pages except the first one
+function hide(elements) {
+    elements = elements.length ? elements : [elements];
+    for (let index = 0; index < elements.length; index++) {
+        elements[index].style.display = 'none';
+    }
+}
+
+hide(document.querySelectorAll("#page2, #page3, #page4, #page5, #page6"));
+
+// now I want to be able to toggle between the pages using the buttons on the screen 
