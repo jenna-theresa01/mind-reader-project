@@ -53,6 +53,8 @@ function myFunction() {
 // need to figure out how to include the other two "Next" buttons (got it)
 
 // following function works, but now I need to make something happen, ie changing the page
+
+/*
 let next_btn = document.getElementsByClassName("next");
 
 let other_btn = function() {
@@ -65,11 +67,16 @@ for (let i = 0; i < next_btn.length; i++) {
 
     console.log("nextButton");
 };
+*/
 
+let next1_btn = document.getElementById("next1")
+next1_btn.addEventListener("click", next1Button);
+function next1Button() {
 
+    console.log("next1Button");
+}
 
-
-// this is adding a click event to my "Go" buttton
+// this is adding a click event to my "reveal" buttton
 let reveal_btn = document.getElementById("reveal")
 reveal_btn.addEventListener("click", revealButton);
 function revealButton() {
@@ -89,8 +96,9 @@ hide(document.querySelectorAll("#page2, #page3, #page4, #page5, #page6"));
 
 // now I want to be able to toggle between the pages using the buttons on the screen 
 document.getElementById("go").addEventListener('click', function () {
-    toggle(document.querySelectorAll("#page2, #page3, #page4, #page5, #page6"));
+    toggle(document.querySelectorAll("#page2"));
   });
+  
 
 function toggle (elements, specifiedDisplay) {
     let element, index;
@@ -113,4 +121,41 @@ function toggle (elements, specifiedDisplay) {
         }
     }
 }
+
+document.getElementById("next1").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page3"));
+});
+
+document.getElementById("next2").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page4"));
+});
+
+document.getElementById("next3").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page5"));
+});
+
+document.getElementById("reset1").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page1"));
+});
+
+document.getElementById("reset2").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page1"));
+});
+
+document.getElementById("reset3").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page1"));
+});
+
+document.getElementById("reset4").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page1"));
+});
+
+document.getElementById("reset5").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page1"));
+});
+
+document.getElementById("reveal").addEventListener('click', function () {
+    toggle(document.querySelectorAll("#page6"));
+});
+
 
