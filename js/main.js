@@ -180,7 +180,31 @@ document.getElementById("reveal").addEventListener('click', function () {
     //    .appendChild(ul);
     });
 
-   
+   let iconArray = [
+    "🎼",
+    "🎧",
+    "🎸",
+    "💽",
+    "📻",
+    "🎶",
+    "🎹",
+    "🎻",
+    "🎺",
+    "🎷",
+
+   ];
+   console.log(iconArray);
+
+ 
+
+
+//    const unsanitized_array = "newArray" + "iconArray";
+
+//    const sanitizer1 = new Sanitizer();
+
+//    document
+//    .getElementById("arrayContainer")
+//    .setHTML(unsanitized_array, {Sanitizer: sanitizer1});
     
 // });
 
