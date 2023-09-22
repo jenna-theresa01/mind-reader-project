@@ -158,4 +158,15 @@ document.getElementById("reveal").addEventListener('click', function () {
     toggle(document.querySelectorAll("#page6"));
 });
 
+let newArray = Array.from({length: 100}, (value, index) => index);
 
+let arrayContainer = document.getElementById("arrayContainer");
+
+let arrayElement = document.createElement("ol");
+
+newArray.forEach(number => {
+    let listItem = document.createElement("li");
+    listItem.textContent = number;
+    arrayElement.appendChild(listItem);
+});
+console.log(newArray);
