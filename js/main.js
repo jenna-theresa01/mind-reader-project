@@ -158,15 +158,44 @@ document.getElementById("reveal").addEventListener('click', function () {
     toggle(document.querySelectorAll("#page6"));
 });
 
-let newArray = Array.from({length: 100}, (value, index) => index);
 
-let arrayContainer = document.getElementById("arrayContainer");
+// document.addEventListener("DOMContentLoaded", function(){
 
-let arrayElement = document.createElement("ol");
+    let newArray = Array.from({length: 100}, (value, index) => index);
 
-newArray.forEach(number => {
-    let listItem = document.createElement("li");
-    listItem.textContent = number;
-    arrayElement.appendChild(listItem);
-});
+    // reference the container where I want to display the array
+    let outputList = document.getElementById('arrayContainer');
+    // let arrayContainer = document.getElementById("arrayContainer");
+
+    // create a <ul> element to hold the list item
+    let ul = document.createElement("ul");
+
+    // loop through the array and create <li> elements for each item
+    newArray.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item; // set the text content of the <li> element to the array item
+         // append the <li> elemnt to the <ul>
+        // append the <ul> to the html document
+       outputList.appendChild(li);
+    //    .appendChild(ul);
+    });
+
+   
+    
+// });
+
 console.log(newArray);
+
+
+// let arrayElement = document.createElement("newArray");
+// document.append(newArray);
+
+
+
+
+
+
+
+
+
+
