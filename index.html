@@ -9,18 +9,18 @@
     <body>
         <!-- This will be the entirety of the page, held within this container -->
          <div class="container position-absolute d-flex justify-content-center"> 
-             <div id="page1" class="card"> <!-- I need a button here to start the game -->
+             <div id="page1" class="card text-center" style="height:500px; width: 275px;"> <!-- I need a button here to start the game -->
                 <!-- page 1 -->
                 <div>I can read your mind</div>
-                <button type="button" id="go" class="btn btn-outline-primary btn-floating bottom-0 end-0" style="border-radius: 50%; width: 50px; height: 50px;">Go</button>
+                <button type="button" id="go" class="btn btn-outline-primary position-absolute bottom-0 end-0" style="border-radius: 50%; width: 50px; height: 50px;">Go</button>
              </div>
 
-             <div id="page2" class="card"> <!-- I need two buttons here: next and reset -->
+             <div id="page2" class="card text-center" style="height:500px; width: 275px;"> <!-- I need two buttons here: next and reset -->
                 <!-- page 2 -->
-                <div>Pick a number from 01 - 99</div>
+                <div style="padding-bottom: 100%;">Pick a number from 01 - 99</div>
                 <button type="button" id="next1" class="btn btn-primary">Next</button>
                 <div>when you have your number click next</div>
-                <button type="button" id="reset1" class="btn reset btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                <button type="button" id="reset1" class="btn reset btn-outline-primary position-absolute bottom-0 end-0" style="border-radius: 50%; width: 50px; height: 50px;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
                         <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
@@ -28,13 +28,13 @@
                 </button>
             </div>
 
-             <div id="page3" class="card"> <!-- I need two buttons here: next and reset -->
+             <div id="page3" class="card text-center" style="height:500px; width: 275px;"> <!-- I need two buttons here: next and reset -->
                 <!-- page 3 -->
-                <div>Add both digits together to get a new number</div>
+                <div style="padding-bottom: 100%;">Add both digits together to get a new number</div>
                 <button type="button" id="next2" class="btn btn-primary">Next</button>
                 <div>Ex: 14 is 1 + 4 = 5</div>
                 <div>click next to proceed</div>
-                <button type="button" id="reset2" class="btn reset btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                <button type="button" id="reset2" class="btn reset btn-outline-primary position-absolute bottom-0 end-0" style="border-radius: 50%; width: 50px; height: 50px;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
                         <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
@@ -42,13 +42,13 @@
                 </button>
             </div>
 
-             <div id="page4" class="card"> <!-- I need two buttons here: next and reset -->
+             <div id="page4" class="card text-center" style="height:500px; width: 275px;"> <!-- I need two buttons here: next and reset -->
                 <!-- page 4 -->
-                <div>Subtract your new number from the original number</div>
+                <div style="padding-bottom: 90%;">Subtract your new number from the original number</div>
                 <button type="button" id="next3" class="btn btn-primary">Next</button>
                 <div> Ex: 14 - 5 = 9</div>
                 <div>click next to proceed</div>
-                <button type="button" id="reset3" class="btn reset btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                <button type="button" id="reset3" class="btn reset btn-outline-primary position-absolute bottom-0 end-0" style="border-radius: 50%; width: 50px; height: 50px;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
                         <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
@@ -56,13 +56,15 @@
                 </button>
             </div>
 
-            <div id="page5" class="card"> This is where I will assign the bootstrap icons for numbers 0-9
+            <div id="page5" class="card text-center overflow-auto" style="height:500px; width: 275px;"> 
                 <!-- page 5 -->
-                <div>"assign symbols here"</div>
+                <!-- <div>"assign symbols here"</div> -->
+                <div id="arrayContainer">
+                </div>
                 <button type="button" id="reveal" class="btn btn-primary">Reveal</button>
                 <div>Find your new number</div>
                 <div>Note the symbol beside the number</div>
-                <button type="button" id="reset4" class="btn reset btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                <button type="button" id="reset4" class="btn reset btn-outline-primary bottom-0 end-0" style="border-radius: 50%; width: 50px; height: 50px;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
                         <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
@@ -70,11 +72,11 @@
                 </button>
             </div>
 
-            <div id="page6" class="card overflow-auto"> Return the symbol associated with the number 9
+            <div id="page6" class="card text-center overflow-auto" style="height:500px; width: 275px;"> Return the symbol
                 <!-- page 6 -->
-                <div>"this is the 'mind read' symbol</div>
+                <div>symbol</div>
                 <div>Your symbol is:</div>
-                <button type="button" id="reset5" class="btn btn-outline-primary" style="border-radius: 50%; width: 50px; height: 50px;">
+                <button type="button" id="reset5" class="btn btn-outline-primary position-absolute bottom-0 end-0" style="border-radius: 50%; width: 50px; height: 50px;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
                         <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>

@@ -159,3 +159,67 @@ document.getElementById("reveal").addEventListener('click', function () {
 });
 
 
+// document.addEventListener("DOMContentLoaded", function(){
+
+    let newArray = Array.from({length: 100}, (value, index) => index);
+
+    // reference the container where I want to display the array
+    let outputList = document.getElementById('arrayContainer');
+    // let arrayContainer = document.getElementById("arrayContainer");
+
+    // create a <ul> element to hold the list item
+    let ul = document.createElement("ul");
+
+    // loop through the array and create <li> elements for each item
+    newArray.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item; // set the text content of the <li> element to the array item
+         // append the <li> elemnt to the <ul>
+        // append the <ul> to the html document
+       outputList.appendChild(li);
+    //    .appendChild(ul);
+    });
+
+   let iconArray = [
+    "🎼",
+    "🎧",
+    "🎸",
+    "💽",
+    "📻",
+    "🎶",
+    "🎹",
+    "🎻",
+    "🎺",
+    "🎷",
+
+   ];
+   console.log(iconArray);
+
+ 
+
+
+//    const unsanitized_array = "newArray" + "iconArray";
+
+//    const sanitizer1 = new Sanitizer();
+
+//    document
+//    .getElementById("arrayContainer")
+//    .setHTML(unsanitized_array, {Sanitizer: sanitizer1});
+    
+// });
+
+console.log(newArray);
+
+
+// let arrayElement = document.createElement("newArray");
+// document.append(newArray);
+
+
+
+
+
+
+
+
+
+
